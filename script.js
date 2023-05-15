@@ -24,4 +24,6 @@ function go_to_left()
     change_image.src='/assets/images/'+arr[theNum]+'.jpg';
   
   }
+
+  
   
