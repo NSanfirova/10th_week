@@ -3,25 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ItGid.info - простой слайдер</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
 <body>
-
-    <section class="summer">
+    <div class="container">
         <h1>Summer</h1>
-        <div class="table">
-            <div>
-            <img id="change_image" src="/assets/images/summer1.jpg">
+        <div class="slider">
+            <div class="slider-line">
+                <img src="/assets/images/summer1.jpg" alt="Summer">
+                <img src="/assets/images/summer2.jpg" alt="Summer">
+                <img src="/assets/images/summer3.jpg" alt="Summer">
+                <img src="/assets/images/summer4.jpg" alt="Summer">
+            </div>
         </div>
-            <button onclick="go_to_left()" class="button ">Показать предыдущую</button>
-
-            <button onclick="go_to_right()" class="button" style="float: right;">Показать следующую</button>
-        </div>
-
-    </section>
+        <button class="slider-prev">Предыдущее</button>
+        <button class="slider-next">Следующее</button>
+    </div>
     <script src="script.js"></script>
 </body>
 

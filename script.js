@@ -1,29 +1,18 @@
-let theNum = "0";
-let arr = ["/assets/images/summer1.jpg","/assets/images/summer2.jpg",
-"/assets/images/summer3.jpg","/assets/images/summer4.jpg"];
+let offset = 0;
+const sliderLine = document.querySelector('.slider-line');
 
-function go_to_right()
+document.querySelector('.slider-next').addEventListener('click', function(){
+    offset = offset + 455;
+    if (offset > 1365) {
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + 'px';
+});
 
-{
-
-  theNum++;
-
-  if(theNum == arr.length){theNum="0";}
-
-  change_image.src='/assets/images/'+arr[theNum]+'.jpg';
-
-}
-
-function go_to_left()
-{
-
-    theNum--;
-  
-    if(theNum == "-1"){theNum = arr.length -1; } console.log(theNum );
-  
-    change_image.src='/assets/images/'+arr[theNum]+'.jpg';
-  
-  }
-
-  
-  
+document.querySelector('.slider-prev').addEventListener('click', function () {
+    offset = offset - 455;
+    if (offset < 0) {
+        offset = 1365;
+    }
+    sliderLine.style.left = -offset + 'px';
+});
